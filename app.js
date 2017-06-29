@@ -13,9 +13,9 @@ var commentRoutes = require('./routes/comments'),
     indexRoutes = require("./routes/index");
 
 var app = express();
-//mongoose.connect('mongodb://localhost/yelp_camp_v10');
-mongoose.connect('mongodb://lzs:13092952156@ds127260.mlab.com:27260/yelpcamp');
-https://myfirstwebapp-lzsapril666.c9users.io
+mongoose.connect(process.env.DATABASEURL);
+//mongoose.connect('mongodb://lzs:13092952156@ds127260.mlab.com:27260/yelpcamp');
+//console.log(process.env.DATABASEURL);
 
 //SCHEMA SETUP
 var Campground  = require("./models/campground"),
